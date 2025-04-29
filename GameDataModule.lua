@@ -269,8 +269,9 @@ gameData = {
                 },
                 OtherMenu = {
                     FreeStarterPack = {0xAABCFC, 0xAABCFC},
-                    Speed = {},
+                    Speed = {0xAAA428, 0xAAA428},
                     CatFruit = {0x2069FAD94, 0x2069FAE74},
+                    RemoveAd = {0xAAA428, 0xAAA428},
                 }
             },
             Menus = {
