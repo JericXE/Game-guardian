@@ -26,7 +26,7 @@ function ensureFolderExists(folder)
         return true
     else
         gg.alert("❌ [ FOLDER ERROR ] ❌\n\nUnable to create folder:\n\n📁 " .. folder .. "\n\nPlease create it manually!")
-        os.exit()
+        return
     end
 end
 
@@ -39,7 +39,7 @@ function writePasswordFile(password)
         f:close()
     else
         gg.alert("❌ [ FILE ERROR ] ❌\n\nUnable to create password file!\n\n📄 Path:\n" .. filePath)
-        os.exit()
+        return
     end
 end
 
@@ -56,5 +56,5 @@ if userInput and userInput[1] == defaultPassword then
     gg.toast("✅ Password correct! Saving and restarting...")
 else
     gg.alert("⛔ [ ACCESS DENIED ] ⛔\n\nIncorrect password entered.\n\n💀 Exiting...")
-    os.exit()
+    return
 end
