@@ -2,7 +2,7 @@ gg.alert("Password Required")
 
 local folderPath = "/storage/emulated/0/Download/.pass"
 local filePath = folderPath .. "/a.txt"
-local defaultPassword = "Ilove"
+local defaultPassword = "Iloves"
 local expiryDuration = 1 * 60 -- 5 hours expiration
 
 -- Function to check if a folder exists (workaround for Game Guardian)
