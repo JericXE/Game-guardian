@@ -1,0 +1,48 @@
+gg.alert("Password Required")
+
+local folderPath = "/storage/emulated/0/Download/.pass"
+local filePath = folderPath .. "/a.txt"
+local defaultPassword = "Ilove"
+local expiryDuration = 1 * 60 -- 5 hours expiration
+
+-- Function to check if a folder exists (workaround for Game Guardian)
+function ensureFolderExists(folder)
+    local testFile = io.open(folder .. "/test.tmp", "w")
+    if testFile then
+        testFile:close()
+        os.remove(folder .. "/test.tmp") -- Remove test file
+        return true
+    else
+        gg.alert("Error: Cannot create folder. Please create it manually: " .. folder)
+        return
+    end
+end
+
+-- Function to write the password file
+function writePasswordFile(password)
+    local expiry = os.time() + expiryDuration -- 5 hours expiry
+    local f = io.open(filePath, "w")
+    if f then
+        f:write(password .. " " .. expiry)
+        f:close()
+    else
+        gg.alert("Error: Could not create password file.")
+        return
+    end
+end
+
+-- Ensure the folder exists
+ensureFolderExists(folderPath)
+
+-- Prompt for password
+local userInput = gg.prompt({"Enter Password:"}, {""}, {"text"})
+
+if userInput and userInput[1] == defaultPassword then
+    writePasswordFile(defaultPassword) -- Save new password with expiry
+    gg.toast("Password saved. Relaunching script...")
+else
+    gg.alert("Incorrect password. Exiting...")
+    return
+end
+
+--Sussy
