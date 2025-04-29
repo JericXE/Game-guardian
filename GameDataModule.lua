@@ -1,6 +1,7 @@
 -- GameDataModule.lua
 
 gameData = {
+    ["14.6.0"] = {},
     ["14.5.0"] = {
         ["32-bit CBB"] = {
             OffsetsForDetection = 0xA4395C,
