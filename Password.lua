@@ -2,8 +2,6 @@
 --        Password Prompt       --
 --=============================--
 
-gg.alert("🔐 [ PASSWORD REQUIRED ] 🔐\n\nPlease enter your access password to continue...")
-
 --=============================--
 --       Configuration         --
 --=============================--
