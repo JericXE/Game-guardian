@@ -17,7 +17,6 @@ local expiryDuration = 1 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
 --      Utility Functions      --
 --=============================--
 
--- Check if folder exists, create if necessary
 function ensureFolderExists(folder)
     local testFile = io.open(folder .. "/test.tmp", "w")
     if testFile then
@@ -26,11 +25,10 @@ function ensureFolderExists(folder)
         return true
     else
         gg.alert("❌ [ FOLDER ERROR ] ❌\n\nUnable to create folder:\n\n📁 " .. folder .. "\n\nPlease create it manually!")
-        return
+        os.exit()
     end
 end
 
--- Write password file with expiration
 function writePasswordFile(password)
     local expiry = os.time() + expiryDuration
     local f = io.open(filePath, "w")
@@ -39,7 +37,7 @@ function writePasswordFile(password)
         f:close()
     else
         gg.alert("❌ [ FILE ERROR ] ❌\n\nUnable to create password file!\n\n📄 Path:\n" .. filePath)
-        return
+        os.exit()
     end
 end
 
@@ -48,16 +46,36 @@ end
 --=============================--
 
 ensureFolderExists(folderPath)
-function try()
-local userInput = gg.prompt({"📝 Enter Password:"}, {""}, {"text"})
 
-if userInput and userInput[1] == defaultPassword then
-    writePasswordFile(defaultPassword)
-    gg.toast("✅ Password correct! Saving and restarting...")
-else
-    gg.alert("⛔ [ DENIED ] ⛔\n\nIncorrect password entered.\n\n")
-    try()
-end
+function try()
+    local input = gg.prompt(
+        {"📝 Enter Password:", "Get Key"},
+        {"", false},
+        {"text", "checkbox"}
+    )
+
+    if not input then
+        gg.toast("❌ Cancelled. Exiting script.")
+        os.exit()
+    end
+
+    local enteredPassword = input[1]
+    local getKeyChecked = input[2]
+
+    if getKeyChecked then
+        gg.copyText("linkvertise")
+        gg.toast("📋 Key copied to clipboard!")
+        try()
+        return
+    end
+
+    if enteredPassword == defaultPassword then
+        writePasswordFile(defaultPassword)
+        gg.toast("✅ Password correct! Saving and restarting...")
+    else
+        gg.alert("⛔ [ DENIED ] ⛔\n\nIncorrect password entered.")
+        try()
+    end
 end
 
 try()
