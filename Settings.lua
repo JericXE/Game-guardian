@@ -23,7 +23,7 @@ function decoratedMainMenu()
         -- Call your decoration settings here
     elseif choice == 4 or choice == nil then
         gg.alert("Goodbye!")
-        os.exit()
+        return
     end
 end
 
