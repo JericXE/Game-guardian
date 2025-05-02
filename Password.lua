@@ -1,0 +1,63 @@
+--=============================--
+--        Password Prompt       --
+--=============================--
+
+gg.alert("🔐 [ PASSWORD REQUIRED ] 🔐\n\nPlease enter your access password to continue...")
+
+--=============================--
+--       Configuration         --
+--=============================--
+
+local folderPath = "/storage/emulated/0/Download/.pass"
+local filePath = folderPath .. "/a.txt"
+local defaultPassword = "Iloves"
+local expiryDuration = 1 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
+
+--=============================--
+--      Utility Functions      --
+--=============================--
+
+-- Check if folder exists, create if necessary
+function ensureFolderExists(folder)
+    local testFile = io.open(folder .. "/test.tmp", "w")
+    if testFile then
+        testFile:close()
+        os.remove(folder .. "/test.tmp")
+        return true
+    else
+        gg.alert("❌ [ FOLDER ERROR ] ❌\n\nUnable to create folder:\n\n📁 " .. folder .. "\n\nPlease create it manually!")
+        return
+    end
+end
+
+-- Write password file with expiration
+function writePasswordFile(password)
+    local expiry = os.time() + expiryDuration
+    local f = io.open(filePath, "w")
+    if f then
+        f:write(password .. " " .. expiry)
+        f:close()
+    else
+        gg.alert("❌ [ FILE ERROR ] ❌\n\nUnable to create password file!\n\n📄 Path:\n" .. filePath)
+        return
+    end
+end
+
+--=============================--
+--          Main Flow          --
+--=============================--
+
+ensureFolderExists(folderPath)
+function try()
+local userInput = gg.prompt({"📝 Enter Password:"}, {""}, {"text"})
+
+if userInput and userInput[1] == defaultPassword then
+    writePasswordFile(defaultPassword)
+    gg.toast("✅ Password correct! Saving and restarting...")
+else
+    gg.alert("⛔ [ DENIED ] ⛔\n\nIncorrect password entered.\n\n")
+    try()
+end
+end
+
+try()
