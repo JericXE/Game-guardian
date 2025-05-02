@@ -8,8 +8,8 @@
 
 local folderPath = "/storage/emulated/0/Download/.pass"
 local filePath = folderPath .. "/a.txt"
-local defaultPassword = "Iloves"
-local expiryDuration = 1 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
+local defaultPassword = "ChickenDragon-973"
+local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
 
 --=============================--
 --      Utility Functions      --
