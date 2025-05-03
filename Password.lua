@@ -6,7 +6,7 @@
 --       Configuration         --
 --=============================--
 
-local folderPath = "/storage/emulated/0/Download/.pass"
+local folderPath = "/storage/emulated/0/.pass"
 local filePath = folderPath .. "/a.txt"
 local defaultPassword = "ChickenDragon-973"
 local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
@@ -14,18 +14,6 @@ local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
 --=============================--
 --      Utility Functions      --
 --=============================--
-
-function ensureFolderExists(folder)
-    local testFile = io.open(folder .. "/test.tmp", "w")
-    if testFile then
-        testFile:close()
-        os.remove(folder .. "/test.tmp")
-        return true
-    else
-        gg.alert("❌ [ FOLDER ERROR ] ❌\n\nUnable to create folder:\n\n📁 " .. folder .. "\n\nPlease create it manually!")
-        return
-    end
-end
 
 function writePasswordFile(password)
     local expiry = os.time() + expiryDuration
@@ -42,8 +30,6 @@ end
 --=============================--
 --          Main Flow          --
 --=============================--
-
-ensureFolderExists(folderPath)
 
 function try()
     local input = gg.prompt(
