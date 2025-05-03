@@ -6,7 +6,7 @@
 --       Configuration         --
 --=============================--
 
-local folderPath = "/storage/emulated/0/.pass"
+local folderPath = "/storage/emulated/0/"
 local filePath = folderPath .. "/a.txt"
 local defaultPassword = "ChickenDragon-973"
 local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
