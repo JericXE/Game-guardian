@@ -6,7 +6,7 @@ gameData = {
             
         },
         ["64-bit CBB"] = {
-            
+            OffsetsForDetection = 0xAABCFC,
         },
         ["64-bit other"] = {
             OffsetsForDetection = 0xAABCFC,
