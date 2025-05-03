@@ -4,7 +4,7 @@ gameData = {
     ["14.4.0] = {},
     ["14.3.0"] = {
         ["32-bit CBB"] = {
-            OffsetsForDetection = 0xAABCFC,
+            OffsetsForDetection = 0xAABCFC
         },
         ["64-bit CBB"] = {
             
