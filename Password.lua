@@ -47,7 +47,7 @@ function try()
     local getKeyChecked = input[2]
 
     if getKeyChecked then
-        gg.copyText("https://direct-link.net/167243/passkey")
+        gg.copyText("https://link-hub.net/167243/passkey-11")
         gg.toast("📋 Key copied to clipboard!")
         try()
         return
