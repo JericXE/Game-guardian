@@ -8,7 +8,7 @@
 
 local folderPath = "/storage/emulated/0/"
 local filePath = folderPath .. "/a.txt"
-local defaultPassword = "UpdateAt14.4.0"
+local defaultPassword = "Later_At14.4.4"
 local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
 
 --=============================--
