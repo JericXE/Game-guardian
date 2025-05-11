@@ -8,7 +8,7 @@
 
 local folderPath = "/storage/emulated/0/"
 local filePath = folderPath .. "/a.txt"
-local defaultPassword = "Later_At14.4.4"
+local defaultPassword = "Update_At14.4.4"
 local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
 
 --=============================--
@@ -47,7 +47,7 @@ function try()
     local getKeyChecked = input[2]
 
     if getKeyChecked then
-        gg.copyText("https://link-target.net/167243/passkey-111")
+        gg.copyText("https://link-hub.net/167243/passkey-112")
         gg.toast("📋 Key copied to clipboard!")
         try()
         return
