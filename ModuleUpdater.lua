@@ -54,7 +54,47 @@ gameData = {
             SeedMapping = {0, 2, 4, 6, 8, 10, 12} 
         },
         ["32-bit other"] = {
-            
+            OffsetsForDetection = 0x9E2558,
+            Offsets = {
+                InGameMenu = {
+                    AutoWin = {0xA48DCC, 0xA48DCC}, --)
+                    InfinityHp = {0xA3D354, 0xA3D354}, --)
+                    InfinityEnergy = {0x9E75B0, 0x9E75B4}, --)
+                    UnlockAllMap = {0x9E7B8C, 0x9E7BAC}, --)
+                    UnlockAllTreasure = {0x9E83D8, 0x9E8BA4}, --)
+                },
+                LobbyMenu = {
+                    Food = {0x9E74F8, 0x9E74FC}, --)
+                    EXP = {0x9E7618, 0x9E761C}, --)
+                    Items = {0xA08E4C, 0xA08E78}, --)
+                    CatEye = {0xD3C71C, 0xD3C748}, --)
+                    NP = {0x9E7620, 0x9E7624}, --)
+                    GamatotoV = {0xD3C74C, 0xD3C760}, --)
+                    GamatotoM = {0xD3C764, 0xD3C7A0}, --)
+                    GamatotoAM = {0xD3C7A4, 0xD3C7E0}, --)
+                    Ticket = {0xC6BA60, 0xC6BA6C, 0x9E2B2C, 0x9E2B48, 0x9E3460, 0x9E346C} --)
+                },
+                CatMenu = {
+                    UnlockAll = {0xA05BB0, 0xA06828}, --)
+                    DeUnlockAll = {0xA05BB4, 0xA0682C}, --)
+                    MaxAll = {0xA06830, 0xA08124}, --)
+                    FormAll = {0xCE45E8, 0xCE5260}, --)
+                    FormAllT = {0xCE5264, 0xCE5EDC}, --)
+                    FormReset = {0xCE45E8, 0xCE5EDC}, --)
+                },
+                OtherMenu = {
+                    FreeStarterPack = {0x9E2558, 0x9E2558}, --)
+                    RemoveAd = {0xD3F65C, 0xD3F65C}, --)
+                }
+            },
+            Menus = {
+                InGame = {"★[►⚡ ᴀᴜᴛᴏ ᴡɪɴ◄]★", "★[►🏰 ɪɴғɪɴɪᴛʏ ʙᴀsᴇ ʜᴘ◄]★", "★[►♾️ ɪɴғɪɴɪᴛʏ ᴇɴᴇʀɢʏ◄]★", "★[►🧹 ᴄʟᴇᴀʀ ᴀʟʟ◄]★", "★[►💎 ᴀʟʟ ᴛʀᴇᴀsᴜʀᴇ◄]★"},
+                Lobby = {"★[►🍖 ᴄᴀᴛ ғᴏᴏᴅ◄]★", "★[►📚 xᴘ◄]★", "★[►🎒 ɪᴛᴇᴍs◄]★", "★[►👁️ ᴄᴀᴛ ᴇʏᴇs◄]★", "★[►🎟️ ᴄᴀᴛ ᴛɪᴄᴋᴇᴛs◄]★", "★[►💊 ᴄᴀᴛᴀᴍɪɴs◄]★", "★[►🪨 ᴍᴀᴛᴇʀɪᴀʟs◄]★", "★[►⚙️ ᴀᴅᴠᴀɴᴄᴇ ᴍᴀᴛᴇʀɪᴀʟs◄]★", "★[►🪙 ɴᴘ◄]★"},
+                Other = {"★[►🎁 ғʀᴇᴇ sᴛᴀʀᴛᴇʀ ᴘᴀᴄᴋ◄]★", "★[►🚫 ʀᴇᴍᴏᴠᴇ ᴘᴏᴘ ᴜᴘ◄]★", "★[►🍎 ᴄᴀᴛ ғʀᴜɪᴛ ɢɪᴠᴇʀ◄]★", "★[►🔮 ᴛᴀʟᴇɴᴛ ᴏʀʙ ɢɪᴠᴇʀ◄]★"},
+                Cat = {"★[►🔓 ᴜɴʟᴏᴄᴋ ᴀʟʟ◄]★", "★[►⬆️ ᴍᴀx ʟᴇᴠᴇʟ ᴀʟʟ◄]★", "★[►✨ ᴛʀᴜᴇ ғᴏʀᴍ ᴀʟʟ◄]★"},
+            },
+            valueMapping = {4294967296,8589934592,12884901888,17179869184,21474836480,25769803776,30064771072,34359738368,38654705664,42949672960},
+            SeedMapping = {0, 2, 4, 6, 8, 10, 12} 
         }
     },
 }
