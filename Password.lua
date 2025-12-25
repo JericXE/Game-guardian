@@ -11,7 +11,7 @@ local filePath = folderPath .. "/a.txt"
  -- local defaultPassword = "UpdateSoon1.3"
 -- 1 local  defaultPassword = "Updated1.2.1.1"
 local defaultPassword = "Update1.3"
-local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed)
+local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed) 
 
 --=============================--
 --      Utility Functions      --
