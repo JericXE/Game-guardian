@@ -8,9 +8,9 @@
 
 local folderPath = "/storage/emulated/0/"
 local filePath = folderPath .. "/a.txt"
-local defaultPassword = "UpdateSoon1.3"
+--local defaultPassword = "UpdateSoon1.3"
 -- 1 local  defaultPassword = "Updated1.2.1.1"
--- local defaultPassword = "Update1.3"
+ local defaultPassword = "Update1.3"
 local expiryDuration = 6 * 60 * 60 -- (Set to 5 * 3600 for 5 hours if needed) 
 
 --=============================--
@@ -49,9 +49,9 @@ function try()
     local getKeyChecked = input[2]
 
     if getKeyChecked then
-       gg.copyText("https://loot-link.com/s?DncmqoKn")
+       --gg.copyText("https://loot-link.com/s?DncmqoKn")
        -- 1 gg.copyText("https://loot-link.com/s?lOkSbJEW")
-      --  gg.copyText("https://lootdest.org/s?mwxUCqJc")
+        gg.copyText("https://lootdest.org/s?mwxUCqJc")
         gg.toast("📋 Key copied to clipboard!")
         try()
         return
