@@ -23,8 +23,8 @@ local keys = {
         link = "https://lootdest.org/s?jtIbPUF6"
     },
     {
-        password = "Update1.7",
-        link = "https://lootdest.org/s?NEXTLINKHERE3"
+        password = "SCRIPT1.2",
+        link = "https://loot-link.com/s?Ywl2mwjb"
     }
 }
 
