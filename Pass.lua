@@ -7,8 +7,8 @@ local expiryDuration = 1 * 60 * 60 -- 6 hours
 
 local keys = {
     {
-        password = "Update1.3",
-        link = "https://lootdest.org/s?mwxUCqJc"
+        password = "Update1.4",
+        link = "https://lootdest.org/s?LwKJdb9a"
     },
     {
         password = "Update1.4",
