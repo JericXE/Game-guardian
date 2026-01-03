@@ -11,8 +11,8 @@ local keys = {
         link = "https://lootdest.org/s?LwKJdb9a"
     },
     {
-        password = "Update1.4",
-        link = "https://lootdest.org/s?NEXTLINKHERE"
+        password = "Core1.1",
+        link = "https://lootdest.org/s?YFHsm3wc"
     },
     {
         password = "Update1.5",
