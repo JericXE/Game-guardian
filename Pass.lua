@@ -109,7 +109,7 @@ local function promptPassword(password)
         {"text", "checkbox"}
     )
 
-    if not input then os.exit() end
+    if not input then return end
 
     if input[2] then
         gg.copyText(keys[index].link)
