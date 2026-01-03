@@ -5,7 +5,6 @@
 local filePath = "/storage/emulated/0/a.txt"
 local expiryDuration = 2 * 60 * 60 -- 6 hours
 
--- 🔁 ORDERED KEYS (FIRST → LAST → LOOP)
 local keys = {
     {
         password = "Update1.3",
@@ -73,7 +72,6 @@ end
 local function getCurrentPassword()
     local savedPassword, expiry = readState()
 
-    -- First run
     if not savedPassword or not expiry then
         return keys[1].password
     end
@@ -83,7 +81,6 @@ local function getCurrentPassword()
         return keys[1].password
     end
 
-    -- Expired → move forward
     if os.time() > expiry then
         index = index + 1
         if index > #keys then
@@ -122,7 +119,7 @@ local function promptPassword(password)
     end
 
     if input[1] == password then
-        writeState(password) -- refresh expiry
+        writeState(password) 
         gg.toast("✅ Access granted (valid for 6h)")
         return
     else
@@ -137,7 +134,6 @@ end
 
 local currentPassword = getCurrentPassword()
 
--- ✅ VALID CHECKER
 if not isStillValid(currentPassword) then
     promptPassword(currentPassword)
 end
