@@ -3,7 +3,7 @@
 --=============================--
 
 local filePath = "/storage/emulated/0/a.txt"
-local expiryDuration = 2 * 60 * 60 -- 6 hours
+local expiryDuration = 1 * 60 * 60 -- 6 hours
 
 local keys = {
     {
